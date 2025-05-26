@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CuisineInsight Q&A</title>
+</head>
+<body>
+    <h1>CuisineInsight Q&A</h1>
+    <form method="POST">
+        <input type="text" name="question" placeholder="Ask about restaurants (e.g., What's the best pizza in town?)" style="width: 300px;">
+        <input type="submit" value="Submit">
+    </form>
+    {% if result %}
+        <h3>Answer:</h3>
+        <p>{{ result }}</p>
+        <h3>Sentiment:</h3>
+        <p>{{ sentiment }}</p>
+        <h3>Retrieval Precision@5:</h3>
+        <p>{{ precision|round(2) }}</p>
+    {% endif %}
+</body>
+</html>
