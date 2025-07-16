@@ -238,17 +238,23 @@ Ensure setup is complete before proceeding.
   - All files in repo root; `vector.py` uses `yelp_reviews.csv`.
 
 ## Output Screenshots
-The following screenshots demonstrate the project’s functionality in `screenshots/`.
-- **Flask Web Outputs:**
-  - `screenshots/flask_precision_0.6.png`: Shows query, answer, and Precision@5=0.6.
-  - `screenshots/flask_precision_0.8.png`: Shows query, answer, and Precision@5=0.8.
-  - `screenshots/flask_precision_1.0.png`: Shows query, answer, and Precision@5=1.0.
-- **Ollama Models:**
-  - `screenshots/ollama_list.png`: `ollama list` output, showing `llama3.2:3b` and `nomic-embed-text:v1.5`.
-- **Flask App Running:**
-  - `screenshots/app_running.png`: PowerShell (venv) output of `python app.py`, showing Flask server running.
-- **Vector and Main Scripts:**
-  - `screenshots/vector_main_running.png`: PowerShell (venv) output of `python vector.py` (batch upserts, accuracy) and `python main.py` (query results).
-- **GPU Monitoring:**
-  - `screenshots/monitor_cuda.png`: PowerShell (venv) output of `python Monitor_cuda.py`, showing VRAM.
-  - `screenshots/nvidia_smi.png`: Command terminal output of `nvidia-smi`, showing GPU utilization.
+
+The following screenshots demonstrate the project’s functionality from the `screenshots/` folder:
+
+### Flask Web Outputs
+- ![Precision 0.6](screenshots/flask_precision_0.6.png)
+- ![Precision 0.8](screenshots/flask_precision_0.8.png)
+- ![Precision 1.0](screenshots/flask_precision_1.0.png)
+
+### Ollama Models
+- ![Ollama List](screenshots/ollama_list.png)
+
+### Flask App Running
+- ![App Running](screenshots/app_running.png)
+
+### Vector and Main Scripts
+- ![Vector & Main Running](screenshots/vector_main_running.png)
+
+### GPU Monitoring
+- ![Monitor CUDA](screenshots/monitor_cuda.png)
+- ![NVIDIA SMI](screenshots/nvidia_smi.png)
