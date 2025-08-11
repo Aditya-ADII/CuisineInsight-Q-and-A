@@ -12,6 +12,26 @@ CuisineInsight Q&A is a Retrieval-Augmented Generation (RAG) system for answerin
 - **Data Processing:** Converts Yelp JSON datasets to CSV, enabling scalable review analysis.
 - **Modular Design:** Separates preprocessing, vector store creation, Q&A, and evaluation for maintainability.
 
+## System Architecture Diagram
+- ![System Architecture Diagram](screenshots/arch2.png)
+```
++--------------------------------------------------------------------------------------------------------------------+
+|                                    CUISINEINSIGHT Q&A SYSTEM (Run Time)                                            |
+|                                                                                                                    |
+| [Yelp Dataset] -> [preprocess_yelp.py] -> [yelp_reviews.csv] -> [TF-IDF + Logistic Regression] -> [Sentiment Labels] |
+|                                                                                                                    |
+| [User] -> [Flask Web App] -> [Query Input] -> [nomic-embed-text:v1.5] -> [Query Embedding]                         |
+|    |                                                                                                               |
+|    |                                       +--> [Chroma Vector Store] -> [Top-5 Reviews]                           |
+|    |                                       |                                                                       |
+|    |                                       v                                                                       |
+|    +-----> [Query] -> [llama3.2:3b] <---- [Retrieved Context] -> [Generated Answer]                                |
+|                                                                                                                    |
+| [PyTorch/CUDA (RTX 3060)] <- (Accelerates Embeddings and Q&A) -> [Monitor_cuda.py]                                 |
+|                                                                                                                    |
++--------------------------------------------------------------------------------------------------------------------+
+```
+
 ## Prerequisites
 - **Hardware:**
   - GPU: NVIDIA RTX 3060 (12 GB VRAM recommended).
