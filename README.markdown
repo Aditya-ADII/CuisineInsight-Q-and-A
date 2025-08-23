@@ -230,17 +230,18 @@ Ensure setup is complete before proceeding.
   scikit-learn
   ```
   - Install with `pip install -r requirements.txt`.
+- LangChain packages (`langchain`, `langchain-ollama`, `langchain-chroma`) enable Retrieval-Augmented Generation (RAG), model integration with `llama3.2:3b` and `nomic-embed-text:v1.5`, and Chroma vector store creation.
 - **PyTorch:**
-  - Install separately: `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126`.
-  - Supports CUDA 12.6.
+- Install separately: `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126`.
+- Supports CUDA 12.6 for GPU acceleration.
 - **Language Models:**
-  - `llama3.2:3b`: ~4 GB VRAM, for Q&A.
-  - `nomic-embed-text:v1.5`: ~0.3 GB VRAM, for embeddings.
-  - Install via `ollama pull`.
+- `llama3.2:3b`: ~4 GB VRAM, for Q&A.
+- `nomic-embed-text:v1.5`: ~0.3 GB VRAM, for embeddings.
+- Install via `ollama pull`.
 - **System Drivers:**
-  - Pre-installed NVIDIA CUDA Toolkit 12.6 and cuDNN.
+- Pre-installed NVIDIA CUDA Toolkit 12.6 and cuDNN.
 - **Tools:**
-  - `ollama` for model management.
+- `ollama` for model management.
 
 ## Dataset
 - **Files:**
