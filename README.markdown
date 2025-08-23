@@ -229,7 +229,7 @@ Ensure setup is complete before proceeding.
   flask
   scikit-learn
   ```
-  - Install with `pip install -r requirements.txt`.
+- Install with `pip install -r requirements.txt`.
 - LangChain packages (`langchain`, `langchain-ollama`, `langchain-chroma`) enable Retrieval-Augmented Generation (RAG), model integration with `llama3.2:3b` and `nomic-embed-text:v1.5`, and Chroma vector store creation.
 - **PyTorch:**
 - Install separately: `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126`.
